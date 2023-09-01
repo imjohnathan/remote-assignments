@@ -1,0 +1,196 @@
+/*===============
+   Basic Style
+================*/
+
+body {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Google Sans", "Noto Sans", sans-serif;
+}
+
+:link,
+:visited {
+  color: #1a73e8;
+  outline: 0;
+  word-break: break-word;
+}
+
+.btn {
+  display: inline-block;
+  height: 36px;
+  line-height: 34px;
+  padding: 0 24px;
+  border: 1px solid rgb(218, 220, 224);
+  border-radius: 4px;
+  background-color: #fff;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: rgb(232, 240, 254);
+  border-color: rgb(210, 227, 252);
+}
+
+main {
+  margin-top: 49px;
+}
+
+/*===============
+   Header
+================*/
+
+.master-header {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  z-index: 999;
+}
+
+.master-header .hamburger,
+.master-header .search-icon {
+  display: flex;
+  align-items: center;
+}
+
+.master-header .hamburger {
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.2s;
+  width: 40px;
+  cursor: pointer;
+  color: #595959;
+}
+
+.master-header .hamburger:hover {
+  background-color: #f1f3f4;
+  color: #000;
+}
+
+.master-header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.master-header .logo {
+  height: 36px;
+  margin: 6px 0;
+}
+
+.master-header .logo img {
+  height: 32px;
+}
+
+.master-header .search {
+  flex: 1;
+}
+
+.master-header .search-icon {
+  justify-content: end;
+  color: #595959;
+}
+
+.master-header .search-icon i {
+  height: 24px;
+}
+
+.master-header .account a {
+  display: block;
+  font-size: 14px;
+  color: #3871e0;
+  line-height: 36px;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.master-header .account a:hover {
+  background-color: #e9f0fd;
+}
+
+.master-header .menu,
+.master-header .search-bar,
+.master-header .language {
+  display: none;
+}
+
+/*===============
+   Main Content
+================*/
+
+.banner {
+  padding: 16px;
+  background-color: #f1f3f4;
+  color: #000000a6;
+}
+.banner .banner-message img {
+  width: 122px;
+}
+
+.banner .banner-message span {
+  display: block;
+}
+
+.banner .banner-button a {
+  margin-top: 12px;
+}
+
+.hero {
+  padding: 16px;
+}
+
+.hero .hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero .hero-title h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 85px;
+  margin-bottom: 16px;
+}
+
+.hero .hero-title h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero .hero-graphic-cta {
+  padding-top: 8px;
+  margin-left: 12px;
+}
+
+.hero .hero-graphic-cta h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.hero .hero-graphic-cta-link {
+  display: flex;
+  gap: 5px 15px;
+  flex-wrap: wrap;
+}
+
+.hero .hero-graphic-cta-link li a {
+  border: 2px solid #000;
+}
+
+.hero .hero-graphic-cta-link .material-icons {
+  vertical-align: text-top;
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+/*===============
+   Media Query
+================*/
