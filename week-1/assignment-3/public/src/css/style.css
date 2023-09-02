@@ -1010,6 +1010,10 @@ main {
     padding: 8px 0;
     margin-inline: -0;
   }
+  .products .products-list .products-list-card {
+    flex: 1 0 300px;
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 841px) {
@@ -1098,6 +1102,10 @@ main {
     width: auto;
   }
 }
+
+/*===============
+   Media Query For Simulates The Header Nav Menu
+================*/
 
 @media screen and (min-width: 1421px) {
   .hero .hero-graphic-cta-link li:first-child {
