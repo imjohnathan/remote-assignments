@@ -725,6 +725,7 @@ main {
   border-radius: 50%;
   background: #5f6368;
   opacity: 0.2;
+  cursor: pointer;
 }
 
 .carousel-pagination ul li.active {
@@ -734,6 +735,7 @@ main {
 .carousel-pagination ul li.autoplay {
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
 .carousel-pagination ul li .material-icons {
