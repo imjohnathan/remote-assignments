@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
   <body>
-    <div class="wrapper">
+    <div class="main-wrapper">
       <!--Header-->
       <header class="master-header">
         <div class="nav">
@@ -29,24 +29,54 @@
           <!--Menu Nav-->
           <nav class="menu">
             <ul>
-              <li>Products</li>
-              <li>Solutions</li>
-              <li>Events</li>
-              <li>Learn</li>
-              <li>Community</li>
-              <li>Blog</li>
-              <li>更多選項</li>
+              <li>
+                <span>Products </span>
+                <i class="material-icons">arrow_drop_down</i>
+              </li>
+              <li>
+                <span>Solutions </span>
+              </li>
+              <li>
+                <span>Events </span>
+              </li>
+              <li>
+                <span>Learn </span>
+              </li>
+              <li>
+                <span>Community </span>
+                <i class="material-icons">arrow_drop_down</i>
+              </li>
+              <li>
+                <span>Developer Profile</span>
+              </li>
+              <li>
+                <span>Blog </span>
+              </li>
+            </ul>
+          </nav>
+          <nav class="menu-more">
+            <ul>
+              <li>
+                <span>更多選項 </span>
+                <i class="material-icons">arrow_drop_down</i>
+              </li>
             </ul>
           </nav>
           <div class="search">
             <div class="search-icon"><i class="material-icons">search</i></div>
             <div class="search-bar">
-              <div>search icon</div>
+              <i class="material-icons">search</i>
               <div>搜尋結果</div>
             </div>
           </div>
           <div class="language">
-            <div>繁體-中文</div>
+            <div>
+              <a class="btn" href="https://developers.google.com/">
+                <i class="material-icons language">language</i>
+                <p>中文 – 繁體</p>
+                <i class="material-icons">arrow_drop_down</i>
+              </a>
+            </div>
           </div>
           <div class="account">
             <a href="#">登入</a>
@@ -57,53 +87,59 @@
       <main>
         <!--Cloud Translation API Banner-->
         <section class="banner">
-          <div class="banner-message">
-            <img src="src/img/banner/translated.svg" />
-            <span
-              >本頁面由 <a href="">Cloud Translation API</a> 翻譯而成。</span
-            >
-          </div>
-          <div class="banner-button">
-            <a class="btn" href="#">Switch to English</a>
+          <div class="banner-wrapper">
+            <div class="banner-message">
+              <img src="src/img/banner/translated.svg" />
+              <span
+                >本頁面由 <a href="">Cloud Translation API</a> 翻譯而成。</span
+              >
+            </div>
+            <div class="banner-button">
+              <a class="btn" href="#">Switch to English</a>
+            </div>
           </div>
         </section>
 
         <section class="hero">
-          <div class="hero-title">
-            <h1>
-              聰明智慧<br />
-              加速運送
-            </h1>
-            <h2>使用開放式的整合式解決方案發揮創意並簡化工作流程。</h2>
-          </div>
-          <div class="hero-graphic">
-            <video autoplay="true" loop="true" muted="true">
-              <source src="src/videos/build-smarter.mp4" type="video/mp4" />
-            </video>
-            <div class="hero-graphic-cta">
-              <h3>我建立的應用程式：</h3>
-              <ul class="hero-graphic-cta-link">
-                <li>
-                  <a class="btn" href="#"
-                    >行動裝置 <i class="material-icons">arrow_forward</i></a
-                  >
-                </li>
-                <li>
-                  <a class="btn" href="#"
-                    >網路 <i class="material-icons">arrow_forward</i></a
-                  >
-                </li>
-                <li>
-                  <a class="btn" href="#"
-                    >AI <i class="material-icons">arrow_forward</i></a
-                  >
-                </li>
-                <li>
-                  <a class="btn" href="#"
-                    >Cloud <i class="material-icons">arrow_forward</i></a
-                  >
-                </li>
-              </ul>
+          <div class="hero-wrapper">
+            <div class="hero-title">
+              <div class="title">
+                <h1>
+                  聰明智慧<br />
+                  加速運送
+                </h1>
+                <h2>使用開放式的整合式解決方案發揮創意並簡化工作流程。</h2>
+              </div>
+            </div>
+            <div class="hero-graphic">
+              <video autoplay="true" loop="true" muted="true">
+                <source src="src/videos/build-smarter.mp4" type="video/mp4" />
+              </video>
+              <div class="hero-graphic-cta">
+                <ul class="hero-graphic-cta-link">
+                  <li><h3>我建立的應用程式：</h3></li>
+                  <li>
+                    <a class="btn" href="#"
+                      >行動裝置 <i class="material-icons">arrow_forward</i></a
+                    >
+                  </li>
+                  <li>
+                    <a class="btn" href="#"
+                      >網路 <i class="material-icons">arrow_forward</i></a
+                    >
+                  </li>
+                  <li>
+                    <a class="btn" href="#"
+                      >AI <i class="material-icons">arrow_forward</i></a
+                    >
+                  </li>
+                  <li>
+                    <a class="btn" href="#"
+                      >Cloud <i class="material-icons">arrow_forward</i></a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -122,76 +158,257 @@
                 </a>
               </div>
             </div>
-            <div class="products-catgories">
-              <ul>
-                <li class="btn active">行動</li>
-                <li class="btn">位置/地圖</li>
-                <li class="btn">物聯網 (IoT)</li>
-                <li class="btn">設計</li>
-                <li class="btn">智慧型住宅生態系統</li>
-                <li class="btn">開放原始碼</li>
-                <li class="btn">搜尋</li>
-                <li class="btn">網路</li>
-                <li class="btn">廣告</li>
-                <li class="btn">AI 與機器學習</li>
-                <li class="btn">Android</li>
-                <li class="btn">AR/VR</li>
-                <li class="btn">C</li>
-                <li class="btn">C#</li>
-                <li class="btn">ChromeOS</li>
-                <li class="btn">Firebase</li>
-                <li class="btn">Flutter</li>
-                <li class="btn">Google 助理</li>
-                <li class="btn">Google Cloud</li>
-                <li class="btn">Google Play</li>
-                <li class="btn">iOS</li>
-                <li class="btn">Terraform</li>
-              </ul>
+            <div class="products-catgories slider">
+              <div class="list slider-list">
+                <ul>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" checked />
+                      <div class="btn">行動</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">位置/地圖</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">物聯網 (IoT)</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">設計</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">智慧型住宅生態系統</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">開放原始碼</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">搜尋</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">網路</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">廣告</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">AI 與機器學習</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">Android</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">AR/VR</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">C</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">C#</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">ChromeOS</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">Firebase</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">Flutter</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">Google 助理</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">Google Cloud</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">Google Play</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">iOS</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox">
+                      <input type="checkbox" />
+                      <div class="btn">Terraform</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="pager next">
+                <i class="material-icons">keyboard_arrow_right</i>
+              </div>
             </div>
             <div class="products-list">
-              <div class="products-list-cards">
-                <article class="products-list-card">
-                  <div class="card-category">
-                    <i class="material-icons">article</i> MARKETING
-                  </div>
-                  <h5 class="card-title">Cloud Translation</h5>
-                  <p class="card-content line-clamp">
-                    Cloud Translation
-                    可讓您根據內容需求，使用預先訓練或自訂的機器學習模型，在不同語言之間進行動態互譯。
-                  </p>
-                  <div class="card-tags">
-                    <div><img src="src/img/products/gcp-icon.svg" /></div>
-                    <div class="tag"><span>AI & Machine Learning</span></div>
-                    <div class="tag">
-                      <i class="material-icons">more_horiz</i>
+              <div class="slider">
+                <div class="products-list-cards slider-list">
+                  <article class="products-list-card">
+                    <div class="card-category">
+                      <i class="material-icons">article</i> MARKETING
                     </div>
-                  </div>
-                </article>
-                <article class="products-list-card">
-                  <div class="card-category">
-                    <i class="material-icons">article</i> MARKETING
-                  </div>
-                  <h5 class="card-title">深度學習容器</h5>
-                  <p class="card-content line-clamp">
-                    經過最佳化處理的預先封裝深度學習容器，可供您在透過
-                    TensorFlow、PyTorch 和 scikit-learn 開發、測試及部署 AI
-                    應用程式時使用。
-                  </p>
-                  <div class="card-tags">
-                    <div><img src="src/img/products/gcp-icon.svg" /></div>
-                    <div class="tag"><span>Cloud</span></div>
-                    <div class="tag">
-                      <i class="material-icons">more_horiz</i>
+                    <h5 class="card-title">Cloud Translation</h5>
+                    <p class="card-content line-clamp">
+                      Cloud Translation
+                      可讓您根據內容需求，使用預先訓練或自訂的機器學習模型，在不同語言之間進行動態互譯。
+                    </p>
+                    <div class="card-tags">
+                      <div><img src="src/img/products/gcp-icon.svg" /></div>
+                      <div class="tag"><span>AI & Machine Learning</span></div>
+                      <div class="tag">
+                        <i class="material-icons">more_horiz</i>
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                  <article class="products-list-card">
+                    <div class="card-category">
+                      <i class="material-icons">article</i> MARKETING
+                    </div>
+                    <h5 class="card-title">深度學習容器</h5>
+                    <p class="card-content line-clamp">
+                      經過最佳化處理的預先封裝深度學習容器，可供您在透過
+                      TensorFlow、PyTorch 和 scikit-learn 開發、測試及部署 AI
+                      應用程式時使用。
+                    </p>
+                    <div class="card-tags">
+                      <div><img src="src/img/products/gcp-icon.svg" /></div>
+                      <div class="tag"><span>Cloud</span></div>
+                      <div class="tag">
+                        <i class="material-icons">more_horiz</i>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="products-list-card">
+                    <div class="card-category">
+                      <i class="material-icons">article</i> MARKETING
+                    </div>
+                    <h5 class="card-title">深度學習容器</h5>
+                    <p class="card-content line-clamp">
+                      經過最佳化處理的預先封裝深度學習容器，可供您在透過
+                      TensorFlow、PyTorch 和 scikit-learn 開發、測試及部署 AI
+                      應用程式時使用。
+                    </p>
+                    <div class="card-tags">
+                      <div><img src="src/img/products/gcp-icon.svg" /></div>
+                      <div class="tag"><span>Cloud</span></div>
+                      <div class="tag">
+                        <i class="material-icons">more_horiz</i>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="products-list-card">
+                    <div class="card-category">
+                      <i class="material-icons">article</i> MARKETING
+                    </div>
+                    <h5 class="card-title">深度學習容器</h5>
+                    <p class="card-content line-clamp">
+                      經過最佳化處理的預先封裝深度學習容器，可供您在透過
+                      TensorFlow、PyTorch 和 scikit-learn 開發、測試及部署 AI
+                      應用程式時使用。
+                    </p>
+                    <div class="card-tags">
+                      <div><img src="src/img/products/gcp-icon.svg" /></div>
+                      <div class="tag"><span>Cloud</span></div>
+                      <div class="tag">
+                        <i class="material-icons">more_horiz</i>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="products-list-card">
+                    <div class="card-category">
+                      <i class="material-icons">article</i> MARKETING
+                    </div>
+                    <h5 class="card-title">深度學習容器</h5>
+                    <p class="card-content line-clamp">
+                      經過最佳化處理的預先封裝深度學習容器，可供您在透過
+                      TensorFlow、PyTorch 和 scikit-learn 開發、測試及部署 AI
+                      應用程式時使用。
+                    </p>
+                    <div class="card-tags">
+                      <div><img src="src/img/products/gcp-icon.svg" /></div>
+                      <div class="tag"><span>Cloud</span></div>
+                      <div class="tag">
+                        <i class="material-icons">more_horiz</i>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="pager next">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </div>
               </div>
-              <div class="products-list-pagination"></div>
+              <div class="products-list-pagination carousel-pagination">
+                <ul>
+                  <li class="active"></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
-        <section class="feature-products">
-          <div class="feature-products-wrapper">
+
+        <section class="feature-products inner">
+          <div class="feature-products-wrapper wrapper">
             <h2>精選產品</h2>
             <div class="feature-products-list">
               <article class="product-grid">
@@ -208,86 +425,209 @@
                   </p>
                 </div>
               </article>
-              <article class="product-grid">
-                <div class="product-grid-icon">
-                  <figure>
-                    <img src="src/img/feature-products/Android_Robot.png" />
-                  </figure>
-                </div>
-                <div class="product-grid-content">
-                  <h4>Android</h4>
-                  <p>
-                    現代風工具可協助你打造大家在所有 Android
-                    裝置上都會喜愛的體驗。
-                  </p>
-                </div>
-              </article>
-              <article class="product-grid">
-                <div class="product-grid-icon">
-                  <figure>
-                    <img src="src/img/feature-products/Android_Robot.png" />
-                  </figure>
-                </div>
-                <div class="product-grid-content">
-                  <h4>Android</h4>
-                  <p>
-                    現代風工具可協助你打造大家在所有 Android
-                    裝置上都會喜愛的體驗。
-                  </p>
-                </div>
-              </article>
-              <article class="product-grid">
-                <div class="product-grid-icon">
-                  <figure>
-                    <img src="src/img/feature-products/Android_Robot.png" />
-                  </figure>
-                </div>
-                <div class="product-grid-content">
-                  <h4>Android</h4>
-                  <p>
-                    現代風工具可協助你打造大家在所有 Android
-                    裝置上都會喜愛的體驗。
-                  </p>
-                </div>
-              </article>
-            </div>
 
-            <div class="feature-products-cta">
-              <a class="btn btn-primary" href="#">查看所有開發人員產品</a>
-            </div>
-          </div>
-        </section>
-        <section class="news-carousel">
-          <div class="news-carousel-wrapper">
-            <div class="news-carousel-border">
-              <article class="carousel">
-                <div class="carousel-img">
-                  <img src="src/img/news-carousel/makersuite.png" />
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img src="src/img/feature-products/google_cloud_64dp.png" />
+                  </figure>
                 </div>
-                <div class="carousel-content">
-                  <div class="carousel-content-catgory">熱門新聞</div>
-                  <h3 class="carousel-content-title">
-                    MakerSuite 現已在 180 個國家/地區推出
-                  </h3>
-                  <p class="carousel-content-text">
-                    立即註冊使用 PaLM 2 語言模型進行 AI 技術原型設計。
+                <div class="product-grid-content">
+                  <h4>Google Cloud</h4>
+                  <p>
+                    在更短時間內建構應用程式、制定更明智的業務決策，並讓各地方的人員交流聯繫。
                   </p>
-                  <div class="carousel-content-more">
-                    <a href="#" class="btn btn-primary">瞭解詳情</a>
-                  </div>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img
+                      src="src/img/feature-products/tensorflow-logo-196.png?hl=zh-tw"
+                    />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>TensorFlow</h4>
+                  <p>
+                    這個端對端平台可讓您輕鬆在任何環境中建構及部署機器學習模型。
+                  </p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img
+                      src="src/img/feature-products/chromeos-logo.svg?hl=zh-tw"
+                    />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>Google Chrome</h4>
+                  <p>提供現代化工具和功能，協助您打造優質網路體驗。</p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img src="src/img/feature-products/play_prism_64dp.png" />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>Google Play</h4>
+                  <p>拓展業務、提升應用程式品質、與觀眾互動及賺取收益。</p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img src="src/img/feature-products/firebase_64dp.png" />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>Firebase</h4>
+                  <p>
+                    一種應用程式開發平台，可協助您建構及拓展使用者喜愛的應用程式和遊戲。
+                  </p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img
+                      src="src/img/feature-products/palm-logo.svg?hl=zh-tw"
+                    />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>PaLM</h4>
+                  <p>簡單且安全的 API，可用來測試 Google 的大型語言模型。</p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img
+                      src="src/img/feature-products/makersuite.png?hl=zh-tw"
+                    />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>MakerSuite</h4>
+                  <p>
+                    在瀏覽器中快速產生泛型 AI
+                    型應用程式，無須具備機器學習專業知識，也不必編寫程式碼。
+                  </p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img src="src/img/feature-products/flutter_64dp.png" />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>Flutter</h4>
+                  <p>
+                    透過單一程式碼集建構、測試及部署美觀的網頁、行動裝置、電腦和嵌入式應用程式。
+                  </p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img
+                      src="src/img/feature-products/google-ads.svg?hl=zh-tw"
+                    />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>Google Ads</h4>
+                  <p>
+                    透過 Google
+                    Ads，向合適的使用者宣傳您的網站、產品和應用程式。
+                  </p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img src="src/img/feature-products/kaggle.svg?hl=zh-tw" />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>Kaggle</h4>
+                  <p>
+                    此平台可分享機器學習資料集、探索及建構模型，並參加競爭活動。
+                  </p>
+                </div>
+              </article>
+              <article class="product-grid">
+                <div class="product-grid-icon">
+                  <figure>
+                    <img src="src/img/feature-products/angular.png?hl=zh-tw" />
+                  </figure>
+                </div>
+                <div class="product-grid-content">
+                  <h4>Angular</h4>
+                  <p>因應未來趨勢的網路開發架構。</p>
                 </div>
               </article>
             </div>
-            <div class="news-carousel-pagination"></div>
           </div>
         </section>
+
+        <section class="feature-products-cta">
+          <a class="btn btn-primary" href="#">查看所有開發人員產品</a>
+        </section>
+
+        <section class="news-carousel">
+          <div class="news-carousel-wrapper wrapper">
+            <div class="slider">
+              <div class="news-carousel-border slider-list">
+                <article class="carousel news-carousel">
+                  <div class="carousel-img">
+                    <img src="src/img/news-carousel/makersuite.png" />
+                  </div>
+                  <div class="carousel-content">
+                    <div class="carousel-content-catgory">熱門新聞</div>
+                    <h3 class="carousel-content-title">
+                      MakerSuite 現已在 180 個國家/地區推出
+                    </h3>
+                    <p class="carousel-content-text">
+                      立即註冊使用 PaLM 2 語言模型進行 AI 技術原型設計。
+                    </p>
+                    <div class="carousel-content-more">
+                      <a href="#" class="btn btn-primary">瞭解詳情</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="pager next">
+                <i class="material-icons">keyboard_arrow_right</i>
+              </div>
+            </div>
+            <div class="news-carousel-pagination carousel-pagination">
+              <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class="autoplay"><i class="material-icons">pause</i></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <section class="android-studio">
-          <div class="android-studio-wrapper">
+          <div class="android-studio-wrapper wrapper">
             <article class="carousel">
-              <div class="carousel-img">
+              <div class="carousel-img felx-1">
                 <img src="src/img/android-studio/giraffe_960.png" />
               </div>
-              <div class="carousel-content">
+              <div class="carousel-content felx-1 self-center">
                 <div class="carousel-content-catgory">ANDROID 新功能</div>
                 <h3 class="carousel-content-title">
                   Android Studio Giraffe 現已穩定
@@ -304,13 +644,13 @@
         </section>
 
         <section class="showcase">
-          <div class="showcase-wrapper">
+          <div class="showcase-wrapper wrapper">
             <div class="showcase-list">
-              <article class="showcase-card carousel">
-                <div class="showcase-img carousel-img">
+              <article class="showcase-card carousel inner">
+                <div class="showcase-img carousel-img felx-1 self-center">
                   <img src="src/img/showcases/explore-your-interests_960.jpg" />
                 </div>
-                <div class="carousel-content">
+                <div class="carousel-content felx-1 self-center">
                   <div class="carousel-content-icon">
                     <img
                       src="src/img/showcases/explore-interests-eyebrow.svg"
@@ -325,14 +665,48 @@
                   </div>
                 </div>
               </article>
+              <article class="showcase-card carousel inner self-center">
+                <div class="showcase-img carousel-img felx-1">
+                  <img src="src/img/showcases/technical-skills_1440.jpg" />
+                </div>
+                <div class="carousel-content felx-1 self-center order-[-1]">
+                  <div class="carousel-content-icon">
+                    <img src="src/img/showcases/technical-skills-eyebrow.svg" />
+                  </div>
+                  <h3 class="carousel-content-title">提陞技術能力</h3>
+                  <p class="carousel-content-text">
+                    掌握 Google 技術的最新資訊。磨練技巧並精進新技能。
+                  </p>
+                  <div class="carousel-content-more">
+                    <a href="#" class="btn">開始學習</a>
+                  </div>
+                </div>
+              </article>
+              <article class="showcase-card carousel inner">
+                <div class="showcase-img carousel-img felx-1 self-center">
+                  <img src="src/img/showcases/find-community_1440.png" />
+                </div>
+                <div class="carousel-content felx-1 self-center">
+                  <div class="carousel-content-icon">
+                    <img src="src/img/showcases/find-community-eyebrow.svg" />
+                  </div>
+                  <h3 class="carousel-content-title">加入社群</h3>
+                  <p class="carousel-content-text">
+                    無論您目前處於哪個開發階段，都能盡情探索各式各樣的網路
+                  </p>
+                  <div class="carousel-content-more">
+                    <a href="#" class="btn">探索社群</a>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </section>
 
-        <section class="social">
+        <section class="social inner">
           <div class="social-wrapper">
             <h2>追蹤 Google Developers 開發人員</h2>
-            <div class="social-list">
+            <div class="social-list feature-products-list">
               <article class="social-card">
                 <div class="social-card-icon">
                   <img src="src/img/social/yt.svg" />
@@ -341,38 +715,71 @@
                   <h4>YouTube</h4>
                   <p>歡迎訂閱創意開發人員社群，學習 Google 技術的最新資訊。</p>
                   <div class="social-card-cta">
-                    <a href="#" class="btn">瞭解詳情</a>
+                    <a
+                      href="https://www.youtube.com/user/GoogleDevelopers?hl=zh-tw"
+                      class="btn"
+                      >瞭解詳情</a
+                    >
                   </div>
                 </div>
               </article>
+
               <article class="social-card">
                 <div class="social-card-icon">
-                  <img src="src/img/social/yt.svg" />
+                  <img src="src/img/social/ig.webp" />
                 </div>
                 <div class="social-card-content">
-                  <h4>YouTube</h4>
-                  <p>歡迎訂閱創意開發人員社群，學習 Google 技術的最新資訊。</p>
+                  <h4>Instagram</h4>
+                  <p>追蹤及探索開發人員資源、社群活動和啟發性故事。</p>
                   <div class="social-card-cta">
-                    <a href="#" class="btn">瞭解詳情</a>
+                    <a
+                      href="https://www.instagram.com/googlefordevs/"
+                      class="btn"
+                      >瞭解詳情</a
+                    >
                   </div>
                 </div>
               </article>
+
               <article class="social-card">
                 <div class="social-card-icon">
-                  <img src="src/img/social/yt.svg" />
+                  <img src="src/img/social/li_96.png" />
                 </div>
                 <div class="social-card-content">
-                  <h4>YouTube</h4>
-                  <p>歡迎訂閱創意開發人員社群，學習 Google 技術的最新資訊。</p>
+                  <h4>LinkedIn</h4>
+                  <p>加入創意開發人員社群，瞭解如何採用最新科技產品。</p>
                   <div class="social-card-cta">
-                    <a href="#" class="btn">瞭解詳情</a>
+                    <a
+                      href="https://www.linkedin.com/showcase/googledevelopers/"
+                      class="btn"
+                      >瞭解詳情</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="social-card">
+                <div class="social-card-icon">
+                  <img src="src/img/social/x.svg" />
+                </div>
+                <div class="social-card-content">
+                  <h4>X</h4>
+                  <p>
+                    加入對話，探索最新的開發人員工具、資源、活動和公告事項。
+                  </p>
+                  <div class="social-card-cta">
+                    <a href="https://twitter.com/googledevs" class="btn"
+                      >瞭解詳情</a
+                    >
                   </div>
                 </div>
               </article>
             </div>
           </div>
         </section>
+
         <hr class="divider" />
+
         <section class="useful-link">
           <div class="useful-link-wrapper">
             <nav class="useful-link-nav">
@@ -510,12 +917,17 @@
             <ul class="privacy">
               <li>
                 <a
+                  class="hyperlink"
                   href="https://developers.google.com/terms/site-terms?hl=zh-tw"
                   >條款</a
                 >
               </li>
               <li>
-                <a href="//policies.google.com/privacy?hl=zh-tw">隱私權</a>
+                <a
+                  class="hyperlink"
+                  href="//policies.google.com/privacy?hl=zh-tw"
+                  >隱私權</a
+                >
               </li>
               <li class="newsletter">
                 <span>訂閱 Google for Developers 電子報</span>
