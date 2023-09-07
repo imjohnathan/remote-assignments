@@ -1,5 +1,6 @@
 /*===============
    Reset Style
+
 ================*/
 
 * {
@@ -68,6 +69,13 @@ body {
 
 .slide-menu.show {
   display: block;
+  animation: slide 1s 1;
+}
+
+.slide-menu.out {
+  display: block;
+  animation: slide 1s 1;
+  animation-direction: reverse;
 }
 
 .slide-menu_wrapper {
@@ -128,8 +136,14 @@ body {
   margin: 0 auto;
 }
 
+.content-box.second,
 .content-box.hide {
   display: none;
+}
+
+.content-box.second.show {
+  display: flex;
+  animation: fade 2s 1;
 }
 
 .main-content .content-box .box {
@@ -151,6 +165,30 @@ body {
   padding: 20px;
   background-color: #ddeeff;
   cursor: pointer;
+}
+
+/*===============
+  Css Animation
+================*/
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /*===============
