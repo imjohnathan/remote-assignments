@@ -56,31 +56,32 @@ body {
 }
 
 .slide-menu {
-  display: none;
   position: fixed;
-  background-color: #fff;
   height: 100%;
-  width: 14rem;
+  width: 100%;
   inset: 0px;
-  margin-left: auto;
-  box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s;
 }
 
 .slide-menu.show {
-  display: block;
-  animation: slide 1s 1;
-}
-
-.slide-menu.out {
-  display: block;
-  animation: slide 1s 1;
-  animation-direction: reverse;
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .slide-menu_wrapper {
+  width: 14rem;
+  height: 100%;
   position: relative;
   padding: 20px 15px;
+  margin-left: auto;
+  background-color: #fff;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  z-index: 999;
 }
 
 .slide-menu_wrapper .close {
@@ -134,16 +135,21 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  transition: all 0.5s;
 }
 
 .content-box.second,
 .content-box.hide {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .content-box.second.show {
-  display: flex;
-  animation: fade 2s 1;
+  opacity: 1;
+  visibility: visible;
+  max-height: 100%;
 }
 
 .main-content .content-box .box {
@@ -165,30 +171,6 @@ body {
   padding: 20px;
   background-color: #ddeeff;
   cursor: pointer;
-}
-
-/*===============
-  Css Animation
-================*/
-
-@keyframes slide {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 /*===============
