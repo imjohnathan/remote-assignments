@@ -11,7 +11,7 @@ const orginalMsg = welcomeMsg.textContent
 welcomeMsg.addEventListener('click', (e) => {
     const msg = 'Have a Good Time!';
     welcomeMsg.textContent = welcomeMsg.textContent === msg ? orginalMsg : msg
-    e.stopPropagation;
+    e.stopPropagation();
 })
 
 // Request2:ClicktoShow/CloseMenu.
@@ -22,23 +22,23 @@ function toggleMenu() {
 
 hamburger.addEventListener('click', (e) => {
     toggleMenu();
-    e.stopPropagation;
+    e.stopPropagation();
 })
 
 closeButton.addEventListener('click', (e) => {
     toggleMenu();
-    e.stopPropagation;
+    e.stopPropagation();
 })
 
 //additional click background to close menu
 slideMenu.addEventListener('click', (e) => {
     if (e.target.closest('.slide-menu_wrapper')) return; //prevent click inside the menu to close
     toggleMenu();
-    e.stopPropagation;
+    e.stopPropagation();
 })
 
 // Request3:ClicktoShowMoreContentBoxes.
 ctaButton.addEventListener('click', (e) => {
     contentBox.classList.toggle('show');
-    e.stopPropagation;
+    e.stopPropagation();
 })
