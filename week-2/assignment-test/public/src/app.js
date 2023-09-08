@@ -10,8 +10,8 @@ function max(numbers) {
         )
 
 }
-console.log(max([1, 2, 4, 5])); // expected output: 5
-console.log(max([5, 2, 7, 1, 6])); // expected output: 7
+console.log('Assignment 1:', max([1, 2, 4, 5])); // expected output: 5
+console.log('Assignment 1:', max([5, 2, 7, 1, 6])); // expected output: 7
 
 
 
@@ -20,19 +20,19 @@ console.log(max([5, 2, 7, 1, 6])); // expected output: 7
 function calculate(args) {
     const argsTemplate = { n1: 0, n2: 0, op: '' }; //give args a template
     const mergeArgs = { ...argsTemplate, ...args }; //be sure all the args keyname are exsit
-    const n1 = Number(mergeArgs?.n1);
-    const n2 = Number(mergeArgs?.n2); //prevent n1,n2 is not a number
-    if (mergeArgs?.op && mergeArgs?.op === '+') {
+    const n1 = Number(mergeArgs.n1);
+    const n2 = Number(mergeArgs.n2); //prevent n1,n2 is not a number
+    if (mergeArgs.op && mergeArgs.op === '+') {
         return n1 + n2;
-    } else if (mergeArgs?.op && mergeArgs?.op === '-') {
+    } else if (mergeArgs.op && mergeArgs.op === '-') {
         return n1 - n2;
     } else {
         return 'Not supported';
     }
 }
-console.log(calculate({ n1: 2, n2: 3, op: '+' })); // expected output: 5
-console.log(calculate({ n1: 5, n2: 2, op: '-' })); // expected output: 3
-console.log(calculate({ n1: 1, n2: 6, op: 'x' })); // expected output: 'Not supported'
+console.log('Assignment 2:', calculate({ n1: 2, n2: 3, op: '+' })); // expected output: 5
+console.log('Assignment 2:', calculate({ n1: 5, n2: 2, op: '-' })); // expected output: 3
+console.log('Assignment 2:', calculate({ n1: 1, n2: 6, op: 'x' })); // expected output: 'Not supported'
 
 
 
@@ -40,7 +40,7 @@ console.log(calculate({ n1: 1, n2: 6, op: 'x' })); // expected output: 'Not supp
 // Assignment 3: Function, Array, and Object
 // Complete the function below to calculate the total price of all products after applying a discount.
 function calculate_(data) {
-    const discount = Number(data?.discount) || 1; // give discount a default value if doesn't exist
+    const discount = Number(1 - data?.discount) || 1; // give discount a default value if doesn't exist
     const products = data?.products;
 
     if (!products.length) return; //if product list is empty, stop the function
@@ -72,7 +72,7 @@ const discountedPrice = calculate_({
         }
     ]
 });
-console.log(discountedPrice) // show the total price of all products after applying a discount
+console.log('Assignment 3:', discountedPrice) // show the total price of all products after applying a discount
 
 
 
@@ -103,7 +103,7 @@ function twoSum(nums, target) {
     return finalIndex
 }
 
-console.log(twoSum([2, 7, 11, 15], 9))
+console.log('Assignment 5:', twoSum([2, 7, 11, 15], 9))
 /*
 For example:
 twoSum([2, 7, 11, 15], 9);
