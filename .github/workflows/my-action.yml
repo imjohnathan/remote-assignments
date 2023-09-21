@@ -113,6 +113,7 @@ jobs:
           path: combined-output
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v1
         with:
           artifact_name: combined-output
