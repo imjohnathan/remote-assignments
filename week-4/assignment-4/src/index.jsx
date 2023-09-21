@@ -60,9 +60,9 @@ export default function App() {
       try {
         setIsloading(true); //setLoading
         const response = await fetch(apiUrl, {
-          headers: {
-            Authorization: "Bearer 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",
-          },
+          // headers: {
+          //   Authorization: "Bearer XXXXXXXXX",
+          // },
           //prevent github rate limited (expires after 30 days)
         });
         if (!response.ok) throw "Failed to retrieve data. Please try again.";
