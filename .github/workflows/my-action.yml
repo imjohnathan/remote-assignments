@@ -4,7 +4,11 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    paths:
+      - "week-4/assignment-3"
+      - "week-4/assignment-4"
+      - "week-4/assignment-5"
+    #branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
