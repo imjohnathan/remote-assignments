@@ -28,15 +28,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.32.9
+      # - uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 6.32.9
 
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "pnpm"
+      # - name: Set up Node
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 18
+      #     cache: "pnpm"
+
+      - name: Install PNPM globally
+        run: npm install -g pnpm
 
       - name: Change to matrix directory
         run: cd ${{ matrix.directory }}
