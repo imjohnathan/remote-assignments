@@ -26,7 +26,7 @@ const Repo = ({ data }) => {
 };
 
 const Skelton = () => (
-  <div className="space-y-3 px-5 py-4 ">
+  <div className="space-y-3 px-5 py-4 animate-pulse">
     <div className="grid grid-cols-3 gap-3">
       <div className="h-4 bg-slate-200 rounded-full"></div>
       <div className="h-4 bg-slate-200 rounded-full col-span-3 row-start-2"></div>
