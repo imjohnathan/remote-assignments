@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -64,15 +64,40 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          name: ${{ env.ARTIFACT_NAME }}
-          path: ${{ matrix.directory }}/deploy
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v1
+      #   with:
+      #     name: ${{ env.ARTIFACT_NAME }}
+      #     path: ${{ matrix.directory }}/deploy
+
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v1
+      #   with:
+      #     artifact_name: ${{ env.ARTIFACT_NAME }}
+      #     path: ${{ matrix.directory }}/deploy
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v2
+
+      # Now, all artifacts are downloaded in the workspace. You can move or combine them as needed.
+
+      - name: Prepare combined directory for deployment
+        run: |
+          mkdir combined-output
+          cp -r output-week-4-assignment-3/* combined-output/
+          cp -r output-week-4-assignment-4/* combined-output/
+          cp -r output-week-4-assignment-5/* combined-output/
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v1
         with:
-          artifact_name: ${{ env.ARTIFACT_NAME }}
-          path: ${{ matrix.directory }}/deploy
+          path: combined-output
