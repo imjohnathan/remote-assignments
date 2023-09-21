@@ -61,7 +61,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          name: output-${{ matrix.directory }}
+          name: output-${{ replace(matrix.directory, '/', '-') }}
           path: ${{ matrix.directory }}/deploy
 
       - name: Deploy to GitHub Pages
