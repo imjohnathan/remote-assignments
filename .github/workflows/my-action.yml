@@ -61,10 +61,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ${{ matrix.directory }}/dist
+          path: ${{ matrix.directory }}/deploy
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
         with:
-          path: ${{ matrix.directory }}/dist
+          path: ${{ matrix.directory }}/deploy
