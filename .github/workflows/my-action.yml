@@ -53,7 +53,7 @@ jobs:
           pnpm run build
           mkdir -p deploy/${{ matrix.directory }}
           mv dist/* deploy/${{ matrix.directory }}/
-          ls -la deploy/${{ matrix.directory }}
+          ls -la deploy/week-4
         working-directory: ${{ matrix.directory }}
 
       - name: Setup Pages
@@ -62,7 +62,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: "./deploy/${{ matrix.directory }}"
+          path: "deploy"
 
       - name: Deploy to GitHub Pages
         id: deployment
