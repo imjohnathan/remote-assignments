@@ -52,6 +52,7 @@ jobs:
         run: |
           pnpm run build
           mkdir -p deploy/${{ matrix.directory }}
+          ls -la deploy/${{ matrix.directory }} 
           mv dist/* deploy/${{ matrix.directory }}/
         working-directory: ${{ matrix.directory }}
 
