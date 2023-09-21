@@ -53,7 +53,8 @@ jobs:
           pnpm run build
           mkdir -p deploy/${{ matrix.directory }}
           mv dist/* deploy/${{ matrix.directory }}/
-          ls -la
+          ls -la deploy
+          ls -la dist
         working-directory: ${{ matrix.directory }}
 
       - name: Setup Pages
