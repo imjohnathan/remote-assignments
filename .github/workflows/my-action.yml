@@ -103,6 +103,12 @@ jobs:
           cp -r output-week-4-assignment-4/* combined-output/
           cp -r output-week-4-assignment-5/* combined-output/
 
+      - name: Upload matrix-specific build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: combined-output
+          path: combined-output
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
         with:
