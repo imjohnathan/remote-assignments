@@ -11,7 +11,7 @@ const Repo = ({ data }) => {
         </span>
       </h3>
       <p className="text-[#596069]">{description}</p>
-      {topics && (
+      {topics.length > 0 && (
         <ul className="flex gap-1 items-center flex-wrap">
           {topics.map((item, i) => (
             <li

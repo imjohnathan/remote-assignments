@@ -4,7 +4,7 @@ import Index from "./index.jsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  //<React.StrictMode>
-  <Index />
-  //</React.StrictMode>
+  <React.StrictMode>
+    <Index />
+  </React.StrictMode>
 );
