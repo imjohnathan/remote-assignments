@@ -48,21 +48,21 @@ jobs:
         run: pnpm install
         working-directory: ${{ matrix.directory }}
 
-      - name: Build
-        run: |
-          pnpm run build
-          mkdir -p deploy/${{ matrix.directory }}/dist
-          mv dist/* deploy/${{ matrix.directory }}/dist
-        working-directory: ${{ matrix.directory }}
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
       - name: Set artifact name
         id: set_artifact_name
         run: |
           ARTIFACT_NAME=$(echo "output-${{ matrix.directory }}" | sed 's/\//-/g')
           echo "ARTIFACT_NAME=$ARTIFACT_NAME" >> $GITHUB_ENV
+
+      - name: Build
+        run: |
+          pnpm run build
+          mkdir -p deploy/${{ env.ARTIFACT_NAME  }}/dist
+          mv dist/* deploy/${{ env.ARTIFACT_NAME  }}/dist
+        working-directory: ${{ matrix.directory }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
