@@ -11,16 +11,18 @@ const Repo = ({ data }) => {
         </span>
       </h3>
       <p className="text-[#596069]">{description}</p>
-      <ul className="flex gap-1 items-center flex-wrap">
-        {topics.map((item, i) => (
-          <li
-            className="text-[#2E66D3] bg-[#E1F3FE] rounded-full grid place-items-center py-[3px] px-3 font-medium text-sm"
-            key={name + "topics_" + i}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
+      {topics && (
+        <ul className="flex gap-1 items-center flex-wrap">
+          {topics.map((item, i) => (
+            <li
+              className="text-[#2E66D3] bg-[#E1F3FE] rounded-full grid place-items-center py-[3px] px-3 font-medium text-sm"
+              key={name + "topics_" + i}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
