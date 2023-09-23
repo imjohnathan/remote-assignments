@@ -58,7 +58,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: "./remote-assignments"
+          path: "./"
 
       - name: Deploy to GitHub Pages
         id: deployment
