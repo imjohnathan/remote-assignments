@@ -16,7 +16,7 @@ const Repo = ({ data }) => {
           {topics.map((item, i) => (
             <li
               className="text-[#2E66D3] bg-[#E1F3FE] rounded-full grid place-items-center py-[3px] px-3 font-medium text-sm"
-              key={name + "topics_" + i}
+              key={i}
             >
               {item}
             </li>
@@ -97,8 +97,7 @@ export default function App() {
         {repos.map((repo) => (
           <Repo data={repo} key={repo.id} />
         ))}
-        {isLoading &&
-          [...Array(5)].map((v, i) => <Skelton key={"loading_" + i} />)}
+        {isLoading && [...Array(5)].map((v, i) => <Skelton key={i} />)}
       </div>
       {hasNextpage && (
         <button

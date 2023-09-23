@@ -35,11 +35,7 @@ export default function App() {
       </button>
       <div className="grid gap-2">
         {counters.map((count, i) => (
-          <Counter
-            key={"counter_" + i}
-            count={count}
-            handlePlus={() => handlePlus(i)}
-          />
+          <Counter key={i} count={count} handlePlus={() => handlePlus(i)} />
         ))}
       </div>
       <button className={btnClass} onClick={handleAddCounter}>

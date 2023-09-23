@@ -1,6 +1,6 @@
-import Header from "./components/header";
-import Hero from "./components/sectionHero";
-import MainContent from "./components/sectionContent";
+import Header from "./components/Header";
+import Hero from "./components/SectionHero";
+import MainContent from "./components/SectionContent";
 
 import "./style.css";
 
