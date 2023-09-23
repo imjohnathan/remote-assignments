@@ -41,13 +41,13 @@ jobs:
         run: npm install -g pnpm
 
       - name: Install dependencies for week-4-assignment-3 and build
-        run: cd week-4/assignment-3 && pnpm install && pnpm run build
+        run: cd week-4/assignment-3 && pnpm install && pnpm run build && rm -rf node_modules
 
       - name: Install dependencies for week-4-assignment-4 and build
-        run: cd week-4/assignment-4 && pnpm install && pnpm run build
+        run: cd week-4/assignment-4 && pnpm install && pnpm run build && rm -rf node_modules
 
       - name: Install dependencies for week-4-assignment-5 and build
-        run: cd week-4/assignment-5 && pnpm install && pnpm run build
+        run: cd week-4/assignment-5 && pnpm install && pnpm run build && rm -rf node_modules
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
